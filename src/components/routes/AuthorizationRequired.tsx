@@ -1,6 +1,7 @@
 import { useIsAuthenticated } from "@azure/msal-react"
-import { Navigate, Outlet } from "react-router-dom";
 import { PATHS } from "../../configs/paths";
+import { Navigate, Outlet } from "react-router-dom";
+
 
 const AuthorizationRequired = () => {
     const isAuthenticated = useIsAuthenticated();
