@@ -4,11 +4,10 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
+variables:
+  DEPLOYMENT_TOKEN: $(API_TOKEN_SECRET)
 
-- powershell: |
-  env:
-    DEPLOYMENT_TOKEN: $(API_TOKEN_SECRET)
+steps:
 
 - task: NodeTool@0
   inputs:
