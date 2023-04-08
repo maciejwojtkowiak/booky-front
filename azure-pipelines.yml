@@ -25,3 +25,4 @@ steps:
     output_location: '/'
     skip_app_build: true
     skip_api_build: true
+    azure_static_web_apps_api_token: '7329dc0d18b98eb7e2891444e6c2fbb2660b58d9ef0b9561397e6b56df7205572-94b08102-a7e3-483b-be10-c5184e21a436003216949'
