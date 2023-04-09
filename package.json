@@ -12,6 +12,7 @@
     "@azure/msal-browser": "^2.35.0",
     "@azure/msal-react": "^1.5.5",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
