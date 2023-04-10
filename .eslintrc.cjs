@@ -26,9 +26,11 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "simple-import-sort", "prettier"],
+  ignorePatterns: ["tailwind.config.js", "*vite.config.ts"],
   rules: {
     "@typescript-eslint/quotes": "off",
     "object-curly-spacing": "off",
+    "react/react-in-jsx-scope": 0,
     "@typescript-eslint/object-curly-spacing": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "simple-import-sort/imports": [
