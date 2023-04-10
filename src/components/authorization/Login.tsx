@@ -1,29 +1,24 @@
 import React from "react";
 import MicrosoftSignIn from "../../assets/microsoft-signin.svg";
-import { useMsal, useMsalAuthentication } from "@azure/msal-react";
+import { useMsal  } from "@azure/msal-react";
 
 const Login = (): JSX.Element => {
   const { instance } = useMsal();
 
-  const microsoftLoginHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const microsoftLoginHandler = (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault();
-    console.log("HI");
-    instance.loginPopup();
-  }
+    try {
+      instance.loginPopup();
+    } catch (error) {
+      console.log(error);
+    }
 
-  return (<div className="text-3xl font-bold underline">
-    <form className="text-3xl font-bold underline text-center" id="login">
+  }
+  console.log(import.meta.env.VITE_CLIENT_ID);
+  return (<div className="text-3xl font-bold underline h-full w-full">
+    <form className="text-3xl font-bold underline text-center grid h-full w-full place-items-center" id="login">
       <ul>
-        <li>
-          <input></input>
-        </li>
-        <li>
-          <input></input>
-        </li>
-        <li>
-          <input></input>
-        </li>
-        <button onClick={(event) => microsoftLoginHandler(event)} />
+        <li><input type="image" src={MicrosoftSignIn} onClick={(event) => microsoftLoginHandler(event)} /></li>
       </ul>
     </form>
   </div>

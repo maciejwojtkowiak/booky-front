@@ -1,5 +1,10 @@
+import HomeHeader from "./HomeHeader"
+
 const Home = () => {
-    return <div></div>
+    return (
+    <>
+        <HomeHeader />
+    </> )
 }
 
 export default Home
