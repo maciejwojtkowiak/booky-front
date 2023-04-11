@@ -1,4 +1,4 @@
 export const PATHS = {
-    HOME: "",
-    LOGIN: "login"
-}
+  HOME: "",
+  AUTHORIZATION: "authorization"
+};

@@ -1,10 +1,10 @@
 import React from "react";
 import MicrosoftSignIn from "../../assets/microsoft-signin.svg";
 import { useMsal  } from "@azure/msal-react";
+import { PopupRequest } from "@azure/msal-browser";
 
 const Login = (): JSX.Element => {
   const { instance } = useMsal();
-
   const microsoftLoginHandler = (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault();
     try {

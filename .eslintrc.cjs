@@ -6,8 +6,6 @@ module.exports = {
   },
   extends: [
     "plugin:react/recommended",
-    "xo",
-    "xo-typescript",
     "standard-with-typescript",
     "plugin:prettier/recommended",
   ],
@@ -25,13 +23,18 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "simple-import-sort", "prettier"],
+  plugins: ["react", "simple-import-sort", "@typescript-eslint", "prettier"],
   ignorePatterns: ["tailwind.config.js", "*vite.config.ts"],
   rules: {
     "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
     "object-curly-spacing": "off",
     "react/react-in-jsx-scope": 0,
-    "@typescript-eslint/object-curly-spacing": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "simple-import-sort/imports": [
       "error",
