@@ -1,10 +1,11 @@
-import HomeHeader from "./HomeHeader"
+import HomeHeader from "./HomeHeader";
 
-const Home = () => {
-    return (
+const Home = (): JSX.Element => {
+  return (
     <>
-        <HomeHeader />
-    </> )
-}
+      <HomeHeader />
+    </>
+  );
+};
 
-export default Home
+export default Home;

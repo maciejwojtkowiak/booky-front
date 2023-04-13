@@ -1,9 +1,13 @@
 interface FormInputProps {
-    placeholder: string;
+  placeholder: string;
 }
 
-const FormInput = ({placeholder}: FormInputProps) => {
-    return (<li><input placeholder={placeholder} /></li>)
-}
+const FormInput = ({ placeholder }: FormInputProps): JSX.Element => {
+  return (
+    <li>
+      <input placeholder={placeholder} />
+    </li>
+  );
+};
 
 export default FormInput;

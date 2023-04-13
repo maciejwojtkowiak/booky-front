@@ -11,8 +11,8 @@ import PublicLayout from "./components/routes/PublicLayout";
 import { authConfig } from "./configs/authConfig";
 import { PATHS } from "./configs/paths";
 import App from "./App";
+import "./index.css"
 
-const msalInstance = new PublicClientApplication(authConfig);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -44,8 +44,6 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <MsalProvider instance={msalInstance}>
       <RouterProvider router={router} />
-    </MsalProvider>
   </React.StrictMode>,
 );

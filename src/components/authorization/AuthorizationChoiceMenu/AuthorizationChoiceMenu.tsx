@@ -18,8 +18,8 @@ const AuthorizationChoiceMenu = (): JSX.Element => {
   };
 
   return (
-    <div>
-      <ul id="authorization-choide">
+    <div className="w-full h-full grid place-items-center">
+      <ul id="authorization-choice" className="list-none grid gap-8 ">
         <AuthorizationChoiceItem
           onClickHandler={onSignInHandler}
           title="Sign in"

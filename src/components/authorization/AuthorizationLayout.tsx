@@ -1,4 +1,3 @@
-import { useIsAuthenticated, useMsal, useMsalAuthentication } from "@azure/msal-react";
 import { type PropsWithChildren } from "react";
 
 interface AuthorizationLayoutProps extends PropsWithChildren {}
