@@ -9,7 +9,12 @@ const AuthorizationChoiceItem = ({
 }: AuthorizationChoiceItemProps): JSX.Element => {
   return (
     <li>
-      <button className="list-none w-64 h-16 bg-slate-400 focus:outline-none" onClick={onClickHandler}>{title}</button>
+      <button
+        className="list-none w-64 h-16 bg-green-700 focus:outline-none text-white"
+        onClick={onClickHandler}
+      >
+        {title}
+      </button>
     </li>
   );
 };

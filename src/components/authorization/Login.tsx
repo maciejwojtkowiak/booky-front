@@ -3,6 +3,8 @@ import { useMsal } from "@azure/msal-react";
 
 import MicrosoftSignIn from "../../assets/microsoft-signin.svg";
 
+import AuthorizationLayout from "./AuthorizationLayout";
+
 const Login = (): JSX.Element => {
   const { instance } = useMsal();
   const microsoftLoginHandler = async (
@@ -17,24 +19,26 @@ const Login = (): JSX.Element => {
   };
 
   return (
-    <div className="text-3xl font-bold underline h-full w-full">
-      <form
-        className="text-3xl font-bold underline text-center grid h-full w-full place-items-center"
-        id="login"
-      >
-        <ul>
-          <li>
-            <input
-              type="image"
-              src={MicrosoftSignIn}
-              onClick={(event) => {
-                void microsoftLoginHandler(event);
-              }}
-            />
-          </li>
-        </ul>
-      </form>
-    </div>
+    <AuthorizationLayout>
+      <div className="text-3xl font-bold underline h-full w-full">
+        <form
+          className="text-3xl font-bold underline text-center grid h-full w-full place-items-center"
+          id="login"
+        >
+          <ul>
+            <li>
+              <input
+                type="image"
+                src={MicrosoftSignIn}
+                onClick={(event) => {
+                  void microsoftLoginHandler(event);
+                }}
+              />
+            </li>
+          </ul>
+        </form>
+      </div>
+    </AuthorizationLayout>
   );
 };
 

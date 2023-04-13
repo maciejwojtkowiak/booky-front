@@ -1,6 +1,7 @@
 import { useMsal } from "@azure/msal-react";
 
 import { authorities } from "../../../configs/authConfig";
+import AuthorizationLayout from "../AuthorizationLayout";
 
 import AuthorizationChoiceItem from "./AuthorizationChoiceItem";
 
@@ -18,18 +19,20 @@ const AuthorizationChoiceMenu = (): JSX.Element => {
   };
 
   return (
-    <div className="w-full h-full grid place-items-center">
-      <ul id="authorization-choice" className="list-none grid gap-8 ">
-        <AuthorizationChoiceItem
-          onClickHandler={onSignInHandler}
-          title="Sign in"
-        />
-        <AuthorizationChoiceItem
-          onClickHandler={onRegisterHandler}
-          title="Register"
-        />
-      </ul>
-    </div>
+    <AuthorizationLayout>
+      <div>
+        <ul id="authorization-choice" className="list-none grid gap-8 ">
+          <AuthorizationChoiceItem
+            onClickHandler={onSignInHandler}
+            title="Sign in"
+          />
+          <AuthorizationChoiceItem
+            onClickHandler={onRegisterHandler}
+            title="Register"
+          />
+        </ul>
+      </div>
+    </AuthorizationLayout>
   );
 };
 
