@@ -1,7 +1,7 @@
 import { useMsal } from "@azure/msal-react";
 
 import { authorities } from "../../../configs/authConfig";
-import AuthorizationLayout from "../AuthorizationLayout";
+import AuthorizationLayout from "./AuthorizationChoiceLayout";
 
 import AuthorizationChoiceItem from "./AuthorizationChoiceItem";
 
