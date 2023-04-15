@@ -8,7 +8,10 @@ import AuthorizationChoiceItem from "./AuthorizationChoiceItem";
 const AuthorizationChoiceMenu = (): JSX.Element => {
   const { instance } = useMsal();
   const onSignInHandler = async (): Promise<void> => {
-    void instance.loginPopup();
+    void instance.loginPopup({
+      authority: authorities.SignIn,
+      scopes: [],
+    });
   };
 
   const onRegisterHandler = async (): Promise<void> => {

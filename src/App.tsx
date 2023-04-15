@@ -6,7 +6,7 @@ import { MsalProvider } from "@azure/msal-react";
 import { authConfig } from "./configs/authConfig";
 
 function App(): JSX.Element {
-  const msalInstance = new PublicClientApplication(authConfig.msalConfig);
+  const msalInstance = new PublicClientApplication(authConfig);
   console.log(msalInstance);
   return (
     <MsalProvider instance={msalInstance}>

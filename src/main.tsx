@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import AuthorizationChoiceMenu from "./components/authorization/AuthorizationChoiceMenu/AuthorizationChoiceMenu";
+import AuthorizationChoiceMenu from "./components/authorization/authorizationChoice/AuthorizationChoiceMenu";
 import Home from "./components/home/Home";
 import AuthorizationRequired from "./components/routes/AuthorizationRequired";
 import PublicLayout from "./components/routes/PublicLayout";
@@ -23,17 +23,12 @@ const router = createBrowserRouter([
       {
         element: <PublicLayout />,
         children: [
-          { path: "/authorization", element: <AuthorizationChoiceMenu /> },
+          { path: PATHS.AUTHORIZATION, element: <AuthorizationChoiceMenu /> },
         ],
       },
       {
         element: <AuthorizationRequired />,
-        children: [
-          {
-            path: PATHS.HOME,
-            element: <Home />,
-          },
-        ],
+        children: [{ path: PATHS.HOME, element: <Home /> }],
       },
     ],
   },
