@@ -5,7 +5,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  DEPLOYMENT_TOKEN: $(API_TOKEN_SECRET)
+  DEPLOYMENT_TOKEN: $(STATIC_WEB_APP_TOKEN)
 
 steps:
 
