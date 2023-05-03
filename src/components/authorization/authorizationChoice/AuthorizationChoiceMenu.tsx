@@ -1,9 +1,9 @@
 import { useMsal } from "@azure/msal-react";
 
 import { authorities } from "../../../configs/authConfig";
-import AuthorizationLayout from "./AuthorizationChoiceLayout";
 
 import AuthorizationChoiceItem from "./AuthorizationChoiceItem";
+import AuthorizationChoiceLayout from "./AuthorizationChoiceLayout";
 
 const AuthorizationChoiceMenu = (): JSX.Element => {
   const { instance } = useMsal();
@@ -22,7 +22,7 @@ const AuthorizationChoiceMenu = (): JSX.Element => {
   };
 
   return (
-    <AuthorizationLayout>
+    <AuthorizationChoiceLayout>
       <div>
         <ul id="authorization-choice" className="list-none grid gap-8 ">
           <AuthorizationChoiceItem
@@ -35,7 +35,7 @@ const AuthorizationChoiceMenu = (): JSX.Element => {
           />
         </ul>
       </div>
-    </AuthorizationLayout>
+    </AuthorizationChoiceLayout>
   );
 };
 

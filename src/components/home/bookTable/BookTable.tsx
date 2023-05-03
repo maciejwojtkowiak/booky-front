@@ -1,9 +1,11 @@
 const BookTable = (): JSX.Element => {
   return (
     <table>
-      <tr>
-        <td>Hej</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td>Hej</td>
+        </tr>
+      </tbody>
     </table>
   );
 };

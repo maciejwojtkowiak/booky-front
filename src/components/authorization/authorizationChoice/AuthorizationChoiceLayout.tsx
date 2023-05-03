@@ -2,7 +2,7 @@ import { type PropsWithChildren } from "react";
 
 interface AuthorizationLayoutProps extends PropsWithChildren {}
 
-const AuthorizationLayout = ({
+const AuthorizationChoiceLayout = ({
   children,
 }: AuthorizationLayoutProps): JSX.Element => {
   return (
@@ -17,4 +17,4 @@ const AuthorizationLayout = ({
   );
 };
 
-export default AuthorizationLayout;
+export default AuthorizationChoiceLayout;
